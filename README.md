@@ -48,11 +48,22 @@ The `bsnp_analyze.R` tool follows a very simple statistical approach (i.e. just 
  
 ## Included SNP files
 
+### GRCh37/hg37/hg19
+
 - `snp138Common.n1000.vh20140318.bed`: A set of 1000 SNPs (avHet >0.25), selected for coverage in RNA-, Exome- and ChIP-seq datasets, including 450k RS probes. **This file is recommended for comparing sequencing data**.
 - `snp141Common_RS-CG.n436.vh20151103.bed`: The original set of 436 SNPs (major allele freq <0.95) that can be assessed on the 450k arrays (RS probes and informative CG type I probes).
 - `snp141Common_RS-CG.n385.vh20151104.bed`: A subset of the previous (consistency with WGS data, i.e. some probes with very high/low intensities were removed).
 - `snp141Common_RS-CG.n192.vh20151103.bed`: A subset of the previous (avHet >0.2). **This file is recommended for comparing 450k data, and for comparing 450k to sequencing data**.
 - `snp141Common_RS-CG.n50.vh20151104.bed`: A subset of the previous (filtered for coverage in Exome- and RNA-seq data).
+
+### GRCh38/hg38
+
+- `snp138Common.n1000_hg38.vh20140318.bed`: set of 1000 SNPs (avHet >0.25), selected for coverage in RNA-, Exome- and ChIP-seq datasets, including 450k RS probes. **this file is recommended for comparing sequencing data**. This is basically the same as `snp138Common.n1000.vh20140318.bed` except for (see [here](snp138Common.n1000_hg38.vh20140318_comparison.xlsx) for a detailed comparison):
+  - rs1610774 & rs1698682 are switched and containing fragment is inverted in hg38 compared to hg19
+  - rs61739740 has merged into rs9780
+  - rs13369115 has merged into rs10155413
+
+
 
 ## Author
 
@@ -61,6 +72,9 @@ The `bsnp_analyze.R` tool follows a very simple statistical approach (i.e. just 
 This code is related to [methylCtools](https://github.com/hovestadt/methylCtools).
 
 ## Changelog
+
+- 1.1 [3. November 2016]
+  - Added GRCh38/hg38 files
 
 - 1.1 [4. November 2015]
   - New Git repository for old code.
