@@ -35,16 +35,16 @@ This is legacy code. The software versions that probably work with this code are
 
 ### Analyze fingerprint files to identify genotype matches
 
- - R script, input arguments can be individual files and directories, separated by comma:
+ - R script, input arguments can be individual files and directories, separated by commata:
    ```Shell
    Rscript fingerprint/bsnp_analyze.R \
-      -i sampleset/ \
+      -i sampleset/,some1.fp,some2.fp \
       -o sampleset
    ```
 
 More detailed information is provided with the help messages and headers of the tools. It is recommended to __understand__ and __adapt__ the settings used in `bsnp_analyze.R`. often it also helps to look at the pairwise correlation table directly (e.g. in Excel using conditional color formatting).
 
-The `bsnp_analyze.R` tool follows a very simple statistical approach (i.e. just calculating the pearson correlation), but provides reasonable results. Because of that it requires SNPs that are highly variable within the population (avHet >0.2). Anyone is invited to come up with a more sophisticated approach.
+The `bsnp_analyze.R` tool follows a very simple statistical approach (i.e. just calculating the Pearson's correlation), but provides reasonable results. Because of that it requires SNPs that are highly variable within the population (avHet >0.2). Anyone is invited to come up with a more sophisticated approach.
  
 ## Included SNP files
 
